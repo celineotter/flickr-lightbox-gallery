@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/">
+        <title>Picture Lightbox</title>
+        <meta name="description" content="Picture Lightbox">
+        <meta name="keywords" content="photos, pictures, lightbox, gallery">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="normalize.css/normalize.css">
+        <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+
+    </head>
+
+    <body>
+        <div>
+            <!-- Navbar -->
+            <nav>
+                <div class="nav-content">
+                    <img class="nav-icon-photo" src="assets/Martz90-Circle-Camera.ico" alt="photo icon">
+                    <div class="nav-title">Flikr Lightbox Gallery</div>
+                    <button type="button" class="btn btn-primary" id="fetchLatest">Refresh</button>
+                </div>
+
+            </nav>
+
+            <!-- Images Grid -->
+            <div class="content fluid-centered">
+                <div id="imageGrid"></div>
+            </div>
+
+
+            <!-- Image Popup -->
+            <div id="imageModal" class="modal">
+                <div class="row modal-content">
+                    <div class="row">
+                        <span id="close" class="glyphicon glyphicon-remove"></span>
+                    </div>
+                    <div class="row modal-content-image">
+                        <span id="previousImg" class="glyphicon glyphicon-chevron-left"></span>
+                        <img id="imageView">
+                        <span id="nextImg" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="row load-more-wrap">
+                <div id="loadMore">Load More</div>
+            </div>
+        </div>
+
+        <!-- bootstrap dependancy -->
+        <script src="jquery/dist/jquery.js"></script>
+        <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- files -->
+        <script src="app.js"></script>
+    </body>
+
+</html>
