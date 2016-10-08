@@ -7,7 +7,7 @@ function ImagesManager () {
         'api_key=45507b391ae7e46d5e7381223d0a5f9d',
         'format=json',
         'nojsoncallback=1',
-        'perpage=20',
+        'per_page=20',
         'page='
     ];
     this._imageApi = 'https://api.flickr.com/services/rest';

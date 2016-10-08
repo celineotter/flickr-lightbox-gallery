@@ -17,10 +17,10 @@ Extra
     $ npm install
 
 # To run the app:
-    $ grunt connect
+    $ node_modules/.bin/http-server client
 
 # Launch in browser locally:
-    http://localhost:8000/
+    http://127.0.0.1:8080/
 
 # Launch in browser:
     https://flickr-lightbox-gallery.herokuapp.com/
