@@ -19,5 +19,8 @@ Extra
 # To run the app:
     $ grunt connect
 
-# Launch in browser:
+# Launch in browser locally:
     http://localhost:8000/
+
+# Launch in browser:
+    https://flickr-lightbox-gallery.herokuapp.com/
