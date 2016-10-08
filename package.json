@@ -1,5 +1,5 @@
 {
-  "name": "tiles-memory-matrix",
+  "name": "lightbox-gallery",
   "version": "1.0.0",
   "description": "Lightbox Gallery",
   "main": "Gruntfile.js",
@@ -15,7 +15,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "start": "grunt connect",
+    "start": "./node_modules/.bin/grunt connect",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
