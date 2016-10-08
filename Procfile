@@ -1,1 +1,1 @@
-web: node_modules/.bin/grunt connect
+web: node_modules/.bin/http-server client
