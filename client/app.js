@@ -1,17 +1,8 @@
-// TODO: clean css
-// TODO: add autoscroll to current position on close
-// scroll with page - not behind ?
-// TODO: github + deploy
-// TODO: tests
-// ES6 ?
-// images vs. photos
-
+/*  Doc Init  */
 
 var imagesManager,
-    viewManager,
-    selectedImageId = null;
+    viewManager;
 
-/* DOC INIT */
 document.onreadystatechange = function () {
     if (document.readyState === 'interactive') {
         initApplication();

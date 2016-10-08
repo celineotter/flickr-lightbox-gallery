@@ -1,18 +1,27 @@
-/*  Consequent to Direct User Interaction Methods */
+/*  User Interaction + Dom Logic Methods  */
 
 function ViewManager() {
     this.modalOpen = false;
     this.selectedImageIdx = null;
 }
 
-ViewManager.prototype.clearImageList = function clearImageList() {
-    document.getElementById('imageGrid').innerHTML = '';
-    imagesManager.reset();
-    imagesManager.fetchImageList();
+ViewManager.prototype.appendImageToDOM = function appendImageToDOM(imageData) {
+    var innerHtml = '<img class="grid-img" id="' + imageData.viewId + '" src="'+imageData.src+'" alt="'+imageData.title+'" onclick="viewManager.openModal(this);"/><figcaption>' + imageData.title + '</figcaption>';
+    var $el = document.createElement('figure');
+    var containerEl = document.getElementById('imageGrid');
+
+    $el.innerHTML = innerHtml;
+    containerEl.appendChild($el);
 };
 
 ViewManager.prototype.loadMoreImages = function loadMoreImages() {
     imagesManager.loadNextPage();
+};
+
+ViewManager.prototype.clearImageList = function clearImageList() {
+    document.getElementById('imageGrid').innerHTML = '';
+    imagesManager.reset();
+    imagesManager.fetchImageList();
 };
 
 ViewManager.prototype.openModal = function openModal(figure) {

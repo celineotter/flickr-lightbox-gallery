@@ -1,4 +1,4 @@
-/*  Image Data Management Methods - Image Manager */
+/*  Image Data Management Logic  */
 
 function ImagesManager () {
     this._imageListApi = 'https://api.flickr.com/services/rest';
@@ -87,14 +87,10 @@ ImagesManager.prototype.parseSize = function parseSize(sizes, image) {
             image.viewId = 'gridImage' + this.viewImages.length;
             image.src = resultImage.source;
             this.viewImages.push(image);
-
-            var el = '<img class="grid-img" id="' + image.viewId + '" src="'+image.src+'" alt="'+image.title+'" onclick="viewManager.openModal(this);"/><figcaption>' + image.title + '</figcaption>';
-            this.appendImage(document.getElementById('imageGrid'), el);
+            viewManager.appendImageToDOM(image);
         }
     }).bind(this));
 };
-
-// viewhelper transfer:
 
 ImagesManager.prototype.appendImage = function appendImage(containerEl, strEl) {
     var $el = document.createElement('figure');
