@@ -3,12 +3,14 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <base href="/">
-        <title>Picture Lightbox</title>
         <meta name="description" content="Picture Lightbox">
         <meta name="keywords" content="photos, pictures, lightbox, gallery">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <base href="/">
+        <title>Picture Lightbox</title>
+
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="normalize.css/normalize.css">
         <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
@@ -16,7 +18,7 @@
     </head>
 
     <body>
-        <div>
+        <div class="flickr-lightbox-gallery">
             <!-- Navbar -->
             <nav>
                 <div class="nav-content">
@@ -41,7 +43,7 @@
                     </div>
                     <div class="row modal-content-image">
                         <span id="previousImg" class="glyphicon glyphicon-chevron-left"></span>
-                        <img id="imageView">
+                        <img id="imageView" alt="flickr-image">
                         <span id="nextImg" class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                     </div>
                 </div>
@@ -53,10 +55,13 @@
             </div>
         </div>
 
-        <!-- bootstrap dependancy -->
+        <!-- Bootstrap Dependancy -->
         <script src="jquery/dist/jquery.js"></script>
         <script src="bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- files -->
+
+        <!-- JS Files -->
+        <script src="services/imagesManager.js"></script>
+        <script src="services/viewManager.js"></script>
         <script src="app.js"></script>
     </body>
 

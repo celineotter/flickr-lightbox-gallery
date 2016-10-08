@@ -36,7 +36,7 @@ nav {
 
 /* MAIN SECTION */
 .content {
-    min-width: 800px;
+    min-width: 300px;
     max-width: 80%;
     margin-top: 90px;
     margin-left: auto;
@@ -89,8 +89,21 @@ nav {
 	cursor: pointer;
 }
 
-@media screen and (max-width: 750px) {
-    #imageGrid { column-gap: 0px; }
+/* Resizings */
+@media screen and (max-width: 900px) {
+    .content {
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .nav-title {
+        display: none;
+    }
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
     #imageGrid figure { width: 100%; }
 }
 
@@ -112,6 +125,7 @@ nav {
     width: 135px;
     display: inline-block;
     padding: 55px 0;
+    cursor: pointer;
 }
 
 /* MODAL */
